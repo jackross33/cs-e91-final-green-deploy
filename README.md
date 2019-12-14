@@ -19,3 +19,8 @@ The repository on GitHub has three branches:
 4. Test stage involves testing the contents, whether the site is up or not, and whether the HTML file(s) is/are valid.
 5. If all tests pass in dev and stage, Jenkins will merge stage with master and trigger the production server to build from the new updated master.
 6. The sites (Prod, Dev and Stage) will all run on Docker containers on CentOS 7 machines.
+
+
+[DOCKER]
+docker build -t webserver-image:v1 .
+docker run -d -p 80:80 webserver-image:v1
